@@ -1,0 +1,7 @@
+project done during **Full stack software Enegineering studies** at **ALX School** It aims to boolean operators,comments, declaring variables and loops in **c language**.
+
+## Technologies
+* Scripts written in Bash 4.3.11(1)
+* C files are compiled using gcc 4.8.4
+* C files are written according to the C90 standard
+* Tested on Ubuntu 14.04 LTS
