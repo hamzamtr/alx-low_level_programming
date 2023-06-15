@@ -1,25 +1,22 @@
-*
- * File: 1-dlistint_len.c
- * Auth: Brennan D Baraban
- */
-
 #include "lists.h"
 
 /**
- * dlistint_len - Counts the number of elements in a linked dlistint_t list.
- * @h: The head of the dlistint_t list.
- *
- * Return: The number of elements in the dlistint_t list.
+ *add_dnodeint - add a node at the beginning
+ *@head: the head of the node
+ *@n : the int to add
+ *Return: The new node.
  */
-size_t dlistint_len(const dlistint_t *h)
+
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	size_t nodes = 0;
-
-	while (h)
-	{
-		nodes++;
-		h = h->next;
-	}
-
-	return (nodes);
+dlistint_t *new_node;
+new_node = malloc(sizeof(dlistint_t));
+if (!new_node || !head)
+return (NULL);
+if (*head != NULL)
+(*head)->prev = new_node;
+new_node->n = n;
+new_node->next = *head;
+*head = new_node;
+return (new_node);
 }
